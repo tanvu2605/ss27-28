@@ -1,25 +1,20 @@
-function timPhanTuLonNhat(arr) {
-    let lonNhat = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-      if (arr[i] > lonNhat) {
-        lonNhat = arr[i];
-      }
+function kiemTraChanLe(so) {
+    if (so % 2 === 0) {
+      return "Số " + so + " là số chẵn.";
+    } else {
+      return "Số " + so + " là số lẻ.";
     }
-    return lonNhat;
   }
   
-  function timPhanTuNhoNhat(arr) {
-    let nhoNhat = arr[0];
-    for (let i = 1; i < arr.length; i++) {
-      if (arr[i] < nhoNhat) {
-        nhoNhat = arr[i];
-      }
-    }
-    return nhoNhat;
-  }
+  let so1 = Math.floor(Math.random() * 100) + 1;
+  let so2 = Math.floor(Math.random() * 100) + 1;
+  let so3 = Math.floor(Math.random() * 100) + 1;
   
-  let mangSoNguyen = [3, 8, 1, 6, 2, 10, 7];
+  console.log("Số 1:", so1);
+  console.log(kiemTraChanLe(so1));
   
-  console.log("Mảng số nguyên:", mangSoNguyen);
-  console.log("Phần tử lớn nhất: " + timPhanTuLonNhat(mangSoNguyen));
-  console.log("Phần tử nhỏ nhất: " + timPhanTuNhoNhat(mangSoNguyen));
+  console.log("Số 2:", so2);
+  console.log(kiemTraChanLe(so2));
+  
+  console.log("Số 3:", so3);
+  console.log(kiemTraChanLe(so3));

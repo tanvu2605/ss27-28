@@ -1,11 +1,19 @@
-function xoaPhanTuLe(arr) {
-    return arr.filter(function (element) {
-      return element % 2 === 0;
-    });
+function demSoKyTu(chuoi) {
+    let dem = 0;
+  
+    for (let i = 0; i < chuoi.length; i++) {
+      if (chuoi[i] !== " ") {
+        dem++;
+      }
+    }
+  
+    return dem;
   }
   
-  let mangSoNguyen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let chuoiKhaiBao = "Đây là một chuỗi bất kỳ với các ký tự và khoảng trắng.";
   
-  let mangMoi = xoaPhanTuLe(mangSoNguyen);
-  console.log("Mảng số nguyên ban đầu:", mangSoNguyen);
-  console.log("Mảng mới sau khi xóa phần tử lẻ:", mangMoi);
+  console.log("Chuỗi khai báo:", chuoiKhaiBao);
+  console.log(
+    "Số ký tự trong chuỗi (không tính ký tự trống):",
+    demSoKyTu(chuoiKhaiBao)
+  );

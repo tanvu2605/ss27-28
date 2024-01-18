@@ -1,14 +1,20 @@
-let a = parseInt(prompt("Nhập số nguyên a:"));
-let b = parseInt(prompt("Nhập số nguyên b:"));
-
-function taoMangTuKhoang(a, b) {
-  let mangKhoang = [];
-  for (let i = a + 1; i < b; i++) {
-    mangKhoang.push(i);
+function timPhanTuCoDoDaiLonNhat(arr) {
+    if (arr.length === 0) {
+      return "Mảng trống.";
+    }
+  
+    let phanTuLonNhat = arr[0];
+  
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i].length > phanTuLonNhat.length) {
+        phanTuLonNhat = arr[i];
+      }
+    }
+  
+    return phanTuLonNhat;
   }
-  return mangKhoang;
-}
-
-let mangKhoangAB = taoMangTuKhoang(a, b);
-console.log("Mảng chứa các số từ " + a + " đến " + b + ":");
-console.log(mangKhoangAB);
+  
+  let mangChuoi = ["apple", "banana", "kiwi", "grape", "watermelon", "orange"];
+  
+  console.log("Mảng chuỗi:", mangChuoi);
+  console.log("Phần tử có độ dài lớn nhất:", timPhanTuCoDoDaiLonNhat(mangChuoi));

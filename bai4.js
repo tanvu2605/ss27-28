@@ -1,18 +1,22 @@
-function chiaMangChanLe(arr) {
-    let mangChan = arr.filter(function (element) {
-      return element % 2 === 0;
-    });
+function demSoLanXuatHien(chuoi, kyTu) {
+    let dem = 0;
   
-    let mangLe = arr.filter(function (element) {
-      return element % 2 !== 0;
-    });
+    for (let i = 0; i < chuoi.length; i++) {
+      if (chuoi[i] === kyTu) {
+        dem++;
+      }
+    }
   
-    return { mangChan, mangLe };
+    return dem;
   }
   
-  let mangSoNguyen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let chuoiNhap = prompt("Nhập vào một chuỗi:");
+  let kyTuNhap = prompt("Nhập vào một ký tự:");
   
-  let ketQuaChiaMang = chiaMangChanLe(mangSoNguyen);
-  console.log("Mảng số nguyên ban đầu:", mangSoNguyen);
-  console.log("Mảng chẵn:", ketQuaChiaMang.mangChan);
-  console.log("Mảng lẻ:", ketQuaChiaMang.mangLe);
+  console.log("Chuỗi đã nhập:", chuoiNhap);
+  console.log("Ký tự đã nhập:", kyTuNhap);
+  console.log(
+    "Số lần xuất hiện của ký tự trong chuỗi:",
+    demSoLanXuatHien(chuoiNhap, kyTuNhap)
+  );
+  
